@@ -1,0 +1,41 @@
+import React from 'react';
+import ReactDom from 'react-dom';
+import './index.css';
+
+
+let css={ };
+let d=new Date(2024,9,11,11);
+let current=d.getHours();
+
+let wish='';
+if(current>=1 && current<=12)
+{
+    wish='GOOD MORNING';
+    css.color='green';
+}else if(current>12 && current <=17){
+    wish='GOOD EVENING';
+    css.color='red';
+}else
+{
+    wish='GOOD NIGHT';
+    css.color='pink';
+}
+
+
+ReactDom.render(
+ <h1>
+       Hellow Anuj Keshari, <span style={css}>{wish}</span> </h1> 
+ ,document.getElementById('root')
+)
+
+
+
+
+body
+{
+  margin:150px;
+  padding:0px;
+  background-color:aqua;
+  text-align:center;
+
+}
